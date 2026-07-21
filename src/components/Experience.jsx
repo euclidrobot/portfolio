@@ -22,12 +22,13 @@ const data = {
     },
     {
       period: 'Freelance',
-      title: 'Website Developer/Designer',
+      title: 'Website Developer & Automation Expert',
       company: 'Remote / Philippines',
       items: [
-        'Conduct lead generation by researching and qualifying prospects, maintaining organized records in lead trackers',
-        'Create marketing creatives (graphics, posts, and promotional materials) to support campaigns and boost engagement',
-        'Send out messages and email campaigns to nurture leads and support client outreach efforts',
+        'Design and develop responsive websites using modern AI-assisted workflows (vibe coding), delivering polished results in record time',
+        'Build custom automation solutions for lead generation, email outreach, and CRM integration to streamline business operations',
+        'Create tailored website experiences combining clean UI/UX design with functional features tailored to client needs',
+        'Manage end-to-end project lifecycle from concept and wireframing to deployment and ongoing maintenance',
       ],
     },
   ],
@@ -49,13 +50,13 @@ const data = {
   itdev: [
     {
       period: 'Freelance',
-      title: 'Website Developer/Designer',
+      title: 'Website Developer & Automation Expert',
       company: 'Remote / Philippines',
       items: [
-        'Lead generation by researching and qualifying prospects',
-        'Maintain organized records in lead trackers',
-        'Create marketing creatives (graphics, posts, promotional materials)',
-        'Send messages and email campaigns to nurture leads',
+        'Design and develop responsive websites using AI-assisted workflows (vibe coding)',
+        'Build custom automation for lead generation, email outreach, and CRM integration',
+        'Create tailored websites with clean UI/UX design and client-specific features',
+        'Manage end-to-end project lifecycle from concept to deployment and maintenance',
       ],
     },
   ],
@@ -70,7 +71,7 @@ export default function Experience() {
       <div className="wrap">
         <div className="section-label"><i className="fas fa-briefcase"></i> Experience</div>
         <h2 className="section-title">Work History</h2>
-        <p className="section-sub">Professional experience delivering exceptional client service and operational support.</p>
+        <p className="section-sub">Blending design, development, and automation to build modern web experiences and streamline workflows.</p>
         <div className="tabs">
           {[{ id: 'all', label: 'All' }, ...roles].map(r => (
             <button key={r.id} className={'tab-btn' + (tab === r.id ? ' active' : '')} onClick={() => setTab(r.id)}>

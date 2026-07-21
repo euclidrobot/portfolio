@@ -123,19 +123,24 @@ body.light .timeline-item .company{color:rgba(0,0,0,.45)}
 body.light .timeline-item ul li{color:rgba(0,0,0,.55)}
 
 /* SKILLS */
-.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.skill-cat{padding:28px;border-radius:16px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)}
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.skill-cat{padding:28px;border-radius:16px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);transition:transform .35s,box-shadow .35s}
+.skill-cat:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(108,92,231,.08);border-color:rgba(108,92,231,.15)}
 body.light .skill-cat{background:rgba(255,255,255,.4);border-color:rgba(0,0,0,.06)}
-.skill-cat h4{font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+body.light .skill-cat:hover{box-shadow:0 8px 32px rgba(108,92,231,.12)}
+.skill-cat h4{font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:600;margin-bottom:20px;display:flex;align-items:center;gap:10px;letter-spacing:.3px}
 .skill-cat h4 i{color:#6c5ce7;font-size:16px}
-.skill-item{margin-bottom:14px}
+.skill-item{margin-bottom:16px}
 .skill-item:last-child{margin-bottom:0}
-.skill-item .skill-label{display:flex;justify-content:space-between;font-size:12.5px;font-weight:500;margin-bottom:6px}
-.skill-item .skill-label span:last-child{color:rgba(255,255,255,.35)}
+.skill-item .skill-label{display:flex;justify-content:space-between;font-size:12.5px;font-weight:500;margin-bottom:7px}
+.skill-item .skill-label span:first-child{color:rgba(255,255,255,.8)}
+body.light .skill-item .skill-label span:first-child{color:rgba(0,0,0,.8)}
+.skill-item .skill-label span:last-child{color:rgba(255,255,255,.35);font-weight:600;font-size:12px}
 body.light .skill-item .skill-label span:last-child{color:rgba(0,0,0,.35)}
-.skill-bar{height:6px;border-radius:10px;background:rgba(255,255,255,.06);overflow:hidden}
+.skill-bar{height:7px;border-radius:10px;background:rgba(255,255,255,.06);overflow:hidden}
 body.light .skill-bar{background:rgba(0,0,0,.06)}
-.skill-bar-fill{height:100%;border-radius:10px;background:linear-gradient(90deg,#6c5ce7,#00cec9);width:0;transition:width 1.2s cubic-bezier(.22,1,.36,1)}
+.skill-bar-fill{height:100%;border-radius:10px;background:linear-gradient(90deg,#6c5ce7,#00cec9);width:0;transition:width 1.2s cubic-bezier(.22,1,.36,1);position:relative}
+.skill-bar-fill::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;border-radius:10px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.15));pointer-events:none}
 
 /* CERTIFICATIONS */
 .certs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}

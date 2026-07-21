@@ -41,12 +41,7 @@ function SkillBar({ pct }) {
     return () => ob.disconnect()
   }, [pct])
 
-  return (
-    <div className="skill-item">
-      <div className="skill-label"><span>{' '}</span><span>{pct}%</span></div>
-      <div className="skill-bar"><div className="skill-bar-fill" ref={ref}></div></div>
-    </div>
-  )
+  return <div className="skill-bar-fill" ref={ref}></div>
 }
 
 export default function Skills() {
@@ -61,7 +56,7 @@ export default function Skills() {
             <div className="skill-cat" key={i}>
               <h4><i className={'fas ' + cat.icon}></i> {cat.title}</h4>
               {cat.items.map((item, j) => (
-                <div key={j}>
+                <div className="skill-item" key={j}>
                   <div className="skill-label"><span>{item.label}</span><span>{item.pct}%</span></div>
                   <div className="skill-bar"><SkillBar pct={item.pct} /></div>
                 </div>
